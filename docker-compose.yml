@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  angular-docker:
+    container_name: angular-docker-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/Users/vamsee/practicess/nodeDocker'
+      - '/Users/vamsee/practicess/nodeDocker/node_modules'
+    ports:
+      - '4200:80'
